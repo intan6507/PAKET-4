@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HYPED UP | Gen Z Fashion Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;900&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --accent: #dc2626;
+        }
+        h1, h2, h3, .font-heading { font-family: 'Unbounded', sans-serif; }
+        body { font-family: 'Space Grotesk', sans-serif; background-color: #0a0a0a; color: white; scroll-behavior: smooth; }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .nav-glass {
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: saturate(180%) blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .text-outline {
+            -webkit-text-stroke: 1px rgba(255,255,255,0.3);
+            color: transparent;
+        }
+        .marquee { white-space: nowrap; overflow: hidden; background: #dc2626; padding: 10px 0; }
+        .marquee-content { display: inline-block; animation: marquee 20s linear infinite; font-weight: 900; text-transform: uppercase; font-size: 0.875rem; tracking: 0.2em; }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+        .play-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+        .group:hover .play-overlay { opacity: 0; }
+        .play-button {
+            width: 4rem;
+            height: 4rem;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(8px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Gradient Overlay khusus untuk Video Header */
+        .header-video-overlay {
+            background: linear-gradient(to bottom, rgba(10,10,10,0.7) 0%, rgba(10,10,10,0.2) 50%, rgba(10,10,10,1) 100%);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <header class="fixed top-0 left-0 right-0 z-[100] nav-glass">
+        <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="text-xl font-black tracking-tighter italic">HYPED<span class="text-blue-600">UP.</span></div>
+            
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#hero" class="text-xs font-bold uppercase tracking-widest hover:text-blue-500 transition-colors">Video</a>
+                <a href="#reviews" class="text-xs font-bold uppercase tracking-widest hover:text-blue-500 transition-colors">Influencer</a>
+                <a href="#gallery" class="text-xs font-bold uppercase tracking-widest hover:text-blue-500 transition-colors">UGC Gallery</a>
+                <a href="#cta" class="bg-white text-black px-5 py-2 rounded-full text-[10px] font-black uppercase hover:bg-blue-600 hover:text-white transition-all">Pesan Sekarang</a>
+            </div>
+
+            <div class="md:hidden text-white">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+            </div>
+        </nav>
+    </header>
+
+    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden border-b border-white/5">
+        <div class="absolute inset-0 z-0">
+            <video autoplay muted loop playsinline class="w-full h-full object-cover scale-105 opacity-60">
+                <source src="video_header.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="absolute inset-0 header-video-overlay z-10"></div>
+        </div>
+
+        <div class="relative z-20 max-w-5xl w-full px-6 text-center md:text-left">
+            <div class="inline-block px-4 py-1 border border-red-600 text-red-500 text-xs font-bold tracking-[0.3em] uppercase mb-6 bg-black/40 backdrop-blur-sm">
+                Paket Hyped Up Exclusive
+            </div>
+            <h1 class="text-5xl md:text-9xl font-black uppercase leading-[0.9] mb-6 italic tracking-tighter">
+                CULTURE <br> <span class="text-blue-500 italic">VANDALS.</span>
+            </h1>
+            <p class="text-lg md:text-2xl text-gray-300 max-w-xl font-light leading-relaxed mb-8">
+                Fokus pada konten viral dengan gaya <span class="text-white font-medium underline decoration-blue-500 decoration-4">video-centric</span> untuk Brand Kolaborasi Anda.
+            </p>
+            <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                <a href="#cta" class="bg-blue-600 hover:bg-white hover:text-black transition-all px-10 py-5 rounded-full font-black uppercase text-sm tracking-widest shadow-2xl">
+                    Pilih Paket
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="marquee">
+        <div class="marquee-content">
+            Fokus Konten Viral • Gaya Video-Centric • Brand Kolaborasi • Gen Z Approved • Fokus Konten Viral • Gaya Video-Centric • Brand Kolaborasi • Gen Z Approved •
+        </div>
+    </div>
+
+    <section id="reviews" class="py-32 px-6 relative bg-[#0d0d0d]">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-7xl font-black uppercase tracking-tighter">
+                    Influencer <span class="text-outline">Review</span>
+                </h2>
+                <p class="text-blue-500 mt-4 font-bold tracking-[0.4em] text-xs uppercase">Verified by Trendsetters</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="group relative video-card">
+                    <div class="relative aspect-[9/16] rounded-[2.5rem] overflow-hidden border border-white/10 glass-card">
+                        <video loop playsinline class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                            <source src="video_fashion2.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-overlay"><div class="play-button"><svg viewBox="0 0 24 24" class="w-6 h-6 fill-white"><path d="M8 5v14l11-7z"/></svg></div></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent p-8 flex flex-col justify-end">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-12 h-12 rounded-full border-2 border-pink-500 overflow-hidden bg-gray-700"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Clara"></div>
+                                <div><p class="font-bold text-sm">@clara.fits</p><p class="text-[10px] text-gray-400 uppercase tracking-widest">TikTok Creator</p></div>
+                            </div>
+                            <p class="text-base text-white font-medium italic">"Look-nya edgy parah! Langsung FYP pas dipake konten haul semalem."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative md:-mt-12 video-card">
+                    <div class="relative aspect-[9/16] rounded-[2.5rem] overflow-hidden border-2 border-blue-500 shadow-[0_0_50px_rgba(37,99,235,0.3)]">
+                        <video loop playsinline class="w-full h-full object-cover">
+                            <source src="video_fashion.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-overlay"><div class="play-button"><svg viewBox="0 0 24 24" class="w-6 h-6 fill-white"><path d="M8 5v14l11-7z"/></svg></div></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent p-8 flex flex-col justify-end">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-10 h-10 rounded-full border-2 border-red-500 overflow-hidden bg-gray-700"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Anya"></div>
+                                <div><p class="font-bold text-sm">@dimas.vibes</p><p class="text-[10px] text-gray-400 uppercase">Streetwear Icon</p></div>
+                            </div>
+                            <p class="text-sm text-gray-200 font-light italic">"OOTD paling dapet banyak compliment. Materialnya bukan main!"</p>
+                        </div>
+                        <div class="absolute top-6 right-6 bg-red-600 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest animate-pulse">Hot Review</div>
+                    </div>
+                </div>
+
+                <div class="group relative video-card">
+                    <div class="relative aspect-[9/16] rounded-[2.5rem] overflow-hidden border border-white/10 glass-card">
+                         <video loop playsinline class="w-full h-full object-cover">
+                            <source src="video_fashion3.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-overlay"><div class="play-button"><svg viewBox="0 0 24 24" class="w-6 h-6 fill-white"><path d="M8 5v14l11-7z"/></svg></div></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent p-8 flex flex-col justify-end">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-10 h-10 rounded-full border-2 border-blue-500 overflow-hidden bg-gray-700"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Sasha"></div>
+                                <div><p class="font-bold text-sm">@sashaa_</p><p class="text-[10px] text-gray-400 uppercase">Fashion Blogger</p></div>
+                            </div>
+                            <p class="text-sm text-gray-200 font-light italic">"Cuttingannya juara, bikin badan kelihatan lebih tegap. 10/10."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-32 text-black rounded-t-[3rem] md:rounded-t-[5rem] overflow-hidden relative" style="background-color: #f0f0f0;">
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute -top-[20%] -left-[10%] w-[70%] h-[70%] bg-[#4facfe] blur-[140px] rounded-full opacity-40"></div>
+        <div class="absolute top-[10%] -right-[10%] w-[60%] h-[60%] bg-[#f093fb] blur-[140px] rounded-full opacity-40"></div>
+    </div>
+
+    <div class="max-w-[1400px] mx-auto px-6 relative z-10">
+        <div class="flex flex-col md:flex-row justify-between items-start mb-20 gap-10">
+            <div class="space-y-2">
+                <h2 class="text-7xl md:text-[10rem] font-black uppercase tracking-tighter leading-[0.8] mix-blend-multiply text-blue-600">
+                    THE <br> <span class="text-black italic">MUSE.</span>
+                </h2>
+                <p class="text-xs tracking-[0.5em] font-bold text-gray-800 uppercase">User Generated Content / 2026</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 auto-rows-[200px] md:auto-rows-[300px]">
+            
+            <div class="relative overflow-hidden rounded-3xl col-span-2 row-span-2 group border-4 border-white shadow-lg">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=80" 
+                     class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 group-hover:rotate-1 transition-all duration-700 ease-out">
+                <div class="absolute inset-0 bg-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+            </div>
+
+            <div class="relative overflow-hidden rounded-3xl row-span-2 group border-4 border-white shadow-md">
+                <img src="gamis.jpeg" 
+                     class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-2">
+                <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0">
+                    <p class="text-white text-[10px] font-bold tracking-widest uppercase">New Arrivals</p>
+                </div>
+            </div>
+
+            <div class="relative overflow-hidden rounded-3xl group border-4 border-white shadow-md">
+                <img src="gamis2.webp" 
+                     class="w-full h-full object-cover transition-all duration-500 group-hover:scale-125 group-hover:rotate-3">
+                <div class="absolute inset-0 bg-red-600/20 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+
+            <div class="relative overflow-hidden rounded-3xl group border-4 border-white shadow-md">
+                <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=800&q=80" 
+                     class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 brightness-75 group-hover:brightness-100">
+            </div>
+
+            <div class="relative overflow-hidden rounded-3xl group md:col-span-2 border-4 border-white shadow-xl">
+                <img src="gamis3.jpg" 
+                     class="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all flex items-center justify-center">
+                    <span class="text-white border-2 border-white px-6 py-2 font-black uppercase tracking-tighter scale-50 group-hover:scale-100 transition-transform">View Look</span>
+                </div>
+            </div>
+
+            <div class="relative overflow-hidden rounded-3xl group border-4 border-white shadow-md">
+                <img src="tas.jfif" 
+                     class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:skew-x-1">
+            </div>
+
+            <div class="relative overflow-hidden rounded-3xl group border-4 border-white shadow-md">
+                <img src="tas1.jpeg" 
+                     class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:-rotate-3">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <section id="cta" class="py-60 bg-[#0a0a0a] text-center px-6 relative overflow-hidden">
+    
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/20 blur-[150px] animate-pulse"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-red-600/10 blur-[150px] animate-pulse" style="animation-delay: 2s;"></div>
+    </div>
+
+    <div class="max-w-5xl mx-auto relative z-10">
+        <h3 class="text-blue-500 font-bold uppercase tracking-[0.8em] mb-12 text-sm md:text-base animate-bounce">
+            Ready to be Viral?
+        </h3>
+
+        <div class="relative inline-block mb-16">
+            <div class="text-7xl md:text-[15rem] font-black tracking-tighter italic leading-none hover:scale-105 transition-transform duration-500 cursor-default">
+                <span class="text-outline block opacity-20 absolute inset-0 translate-x-2">Rp 2.500K</span>
+                <span class="relative bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">
+                    Rp 2.500K
+                </span>
+            </div>
+            <div class="absolute -top-4 -right-8 md:-top-10 md:-right-20 bg-red-600 text-white text-[10px] md:text-xs font-black px-4 py-2 rounded-full uppercase tracking-widest rotate-12 shadow-[0_0_30px_rgba(220,38,38,0.5)]">
+                Limited Slots
+            </div>
+        </div>
+
+        <div class="flex justify-center">
+            <a href="https://wa.me/6281234567890?text=Halo%20Hyped%20Up%2C%20saya%20mau%20order%20Paket%20Exclusive." 
+               target="_blank" 
+               class="group relative inline-flex items-center justify-center px-20 py-8 font-black uppercase text-xl tracking-tighter overflow-hidden rounded-full transition-all duration-300 shadow-[0_0_50px_rgba(255,255,255,0.1)] hover:shadow-blue-600/40">
+                
+                <span class="absolute inset-0 bg-white group-hover:bg-blue-600 transition-colors duration-300"></span>
+                
+                <span class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]">
+                    <span class="relative h-full w-10 bg-white/30"></span>
+                </span>
+
+                <span class="relative text-black group-hover:text-white flex items-center gap-3">
+                    Order Hyped Up
+                    <svg class="w-6 h-6 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </span>
+            </a>
+        </div>
+
+        <p class="mt-12 text-gray-500 text-[10px] font-bold uppercase tracking-[0.4em]">
+            No Hidden Fees • Professional Production • 2026 Edition
+        </p>
+    </div>
+</section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const videoCards = document.querySelectorAll('.video-card');
+            videoCards.forEach(card => {
+                const video = card.querySelector('video');
+                if (video) {
+                    card.addEventListener('mouseenter', () => video.play());
+                    card.addEventListener('mouseleave', () => {
+                        video.pause();
+                        video.currentTime = 0;
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
